@@ -32,17 +32,14 @@ public class sortOfSort {
         int q = 0;
         for (int i = ending; i >= 4; i = i - 4) {
             while (ending > begin) {
-                for (int j = 0; j < 2 && (ending>begin); j++) {
+                for (int j = 0; j < 2 && (ending>=begin); j++) {
                     System.out.println("First For loop");
-                    System.out.println("end " + ending + " q " + q + " i " + i);
                     arr[ending] = arr2[i - q];
                     ending--;
                     q++;
                 }
-                for (int p = 1; p >= 0&& (ending>begin); p--) {
+                for (int p = 1; p >= 0&& (ending>=begin); p--) {
                     System.out.println("Second for");
-                    System.out.println("begin " + begin + " q " + q + " i " + i);
-
                     arr[begin] = arr2[i - q];
                     begin ++;
                     q++;
