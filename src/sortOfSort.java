@@ -1,13 +1,11 @@
 public class sortOfSort {
     int[] arr;
-    //
     public sortOfSort(){
 
     }
     public sortOfSort(int[] ar){
-        arr=ar;
+        arr=ar.clone();
     }
-
 
     public void sortOfSort() {
         for (int i = 0; i < arr.length - 1; i++) {
@@ -31,24 +29,23 @@ public class sortOfSort {
         int begin = 0;
         //to help me continue where I left off "i"-wise.
         int q = 0;
-        for (int i = ending; i >= 4; i = i - 4) {
-            while (ending > begin) {
+        int i=arr.length-1;
+            while (ending >= begin) {
                 for (int j = 0; j < 2 && (ending>=begin); j++) {
-                    System.out.println("First For loop");
                     arr[ending] = arr2[i - q];
                     ending--;
                     q++;
                 }
                 for (int p = 1; p >= 0&& (ending>=begin); p--) {
-                    System.out.println("Second for");
                     arr[begin] = arr2[i - q];
                     begin ++;
                     q++;
+                    System.out.println();
                 }
+                System.out.println();
             }
-        }
     }
-    //something different now
+
     public void twoDprinter(int[] a){
             for (int i = 0; i < a.length; i++) {
                 System.out.print(a[i] + " ");
