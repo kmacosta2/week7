@@ -9,5 +9,7 @@ of N*(N-1), but since we're dealing with big O notation the
 subtraction could be omitted and reduced to **O(N^2)**. This
 public method ends with a single call to my private method 
 so the continuation would lead to an addition that is **not** omitted.
-
+The private method's runtime is **(N-4)/4** but, again, since we're 
+dealing with big O, both subtraction and division can be ignored. 
+So this leads to a simple result of O(N), leading ultimately to **O(N^2+N)**.
 
